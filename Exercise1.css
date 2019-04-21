@@ -1,0 +1,109 @@
+body {
+    margin: 0%;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(26, 28, 34);
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+h1.nm {
+    text-align: center;
+    color: aliceblue
+}
+
+h2.nm {
+    text-align: center;
+    color: aliceblue
+}
+
+div.form1 {
+    align: center;
+    background-color: #ebebeb;
+    margin-top: 0%;
+    padding-left: 150px;
+    padding-top: 10px
+}
+
+p.ket {
+    font-size: 12px;
+}
+
+input#email {
+    text-align: right;
+}
+
+p.daftar1 {
+    font-size: 40px;
+}
+
+p.daftar2 {
+    font-size: 37px
+}
+
+button.submit1 {
+    width: 150px;
+    margin: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(238, 252, 252);
+    border: 0px solid rgb(3, 48, 15);
+    border-radius: 10px;
+    background-color: rgb(3, 48, 15);
+    box-shadow: 0 3px 4px 0 black;
+}
+
+footer#footerAll {
+    padding-left: 150px;
+    background: #373c43;
+    overflow: hidden;
+    color: #77808d
+}
+
+.keterangan {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center
+}
+
+.penjelasan {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 40px;
+}
+
+.text-body {
+    width: 85%;
+    float: right;
+    text-align: justify;
+}
+
+h4 {
+    padding: 0%;
+    margin: 0%
+}
+
+.text1,
+.text2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text1 {
+    font-size: 35px
+}
+
+.link {
+    text-decoration: none
+}
+
+.text2 {
+    font-size: 28px
+}
+
+.hal3 {
+    background-color: #a9b5c5;
+    margin-bottom: 0%
+}

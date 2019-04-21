@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercise 2 (Kalkulator)</title>
+
+    <style>
+        body {
+            margin: 0%;
+        }
+        
+        header {
+            background-image: url(header.png);
+            background-position: 100px;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+        
+        h1.nm {
+            text-align: center;
+            color: aliceblue
+        }
+        
+        h2.nm {
+            text-align: center;
+            color: aliceblue
+        }
+        
+        .text1,
+        .text2 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        
+        .keterangan {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
+        
+        .text1 {
+            font-size: 35px
+        }
+        
+        .text2 {
+            font-size: 28px
+        }
+        
+        .hal3 {
+            background-color: #95b6e0;
+            margin-bottom: 0%
+        }
+        
+        .kalkulator {
+            padding-top: 10px;
+            background-color: #95b6e0;
+            padding-bottom: 100px
+        }
+        
+        table {
+            border: none;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 5px;
+            border: none;
+        }
+        
+        input#output {
+            padding: 10px;
+            width: 410px;
+            border-style: solid;
+            text-align: right;
+            font-size: 16px;
+            background-color: white;
+            width: 96%;
+            border-radius: 10px;
+        }
+        
+        .btn {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(13, 36, 102);
+            border: none;
+            color: rgb(248, 245, 245);
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        .operator {
+            background-color: #383737;
+            font-size: 20px;
+            padding: 0px;
+        }
+        
+        .operator_pangkat {
+            background-color: #383737;
+            font-size: 12px;
+            padding: 0px;
+        }
+        
+        .clr {
+            background-color: #f51404;
+            ;
+        }
+        
+        .hsl {
+            background-color: rgb(32, 85, 7);
+        }
+        
+        footer#footerAll {
+            padding-left: 150px;
+            background: #373c43;
+            overflow: hidden;
+            color: #9da1a7;
+        }
+    </style>
+
+    <script>
+        var bil2;
+        var hasil;
+        var operator;
+        var operator_seleksi = false;
+
+        function btn(angka) {
+            var display = document.getElementById("output").value;
+            if (display == "0") {
+                display = angka;
+            } else {
+                display += angka;
+            }
+            document.getElementById("output").value = display;
+        }
+
+        function clr() {
+            document.getElementById("output").value = "0";
+            bil1 = 0;
+            bil2 = 0;
+            operator_seleksi = false;
+        }
+
+        function koma() {
+            var display = document.getElementById("output").value;
+            if (display.includes(".") == false) {
+                display += ".";
+            }
+            document.getElementById("output").value = display;
+        }
+
+        function btn_operator(o) {
+            operator_seleksi = true;
+            bil1 = parseFloat(document.getElementById("output").value);
+            operator = o;
+            document.getElementById("output").value = "0";
+        }
+
+        function hitung() {
+            if (operator_seleksi == true) {
+                bil2 = parseFloat(document.getElementById("output").value);
+                switch (operator) {
+                    case 1:
+                        hasil = bil1 * bil2;
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 2:
+                        hasil = bil1 / bil2;
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 3:
+                        hasil = bil1 - bil2;
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 4:
+                        hasil = bil1 + bil2;
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 5:
+                        hasil = Math.pow(bil1, bil2);
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 6:
+                        hasil = 1 / bil1;
+                        document.getElementById("output").value = hasil;
+                        break;
+                    case 7:
+
+                        var faktorial = 0.0;
+                        var jum = 0.0;
+                        var angka = 1;
+                        if (bil1 == 0) {
+                            faktorial = 1;
+                        } else {
+                            faktorial = bil1;
+                            for (i = bil1 - 1; i >= 1; i--) {
+                                faktorial = faktorial * i;
+                            }
+                            document.getElementById("output").value = eval(faktorial);
+                        }
+                        break;
+                    case 8:
+                        hasil = Math.pow(bil1, 2);
+                        document.getElementById("output").value = hasil;
+                        break;
+
+                }
+                operator_seleksi = false
+                hasil = 0;
+                bil1 = 0;
+                bil2 = 0;
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <header id="container_header">
+                <h1 class="nm">Javascript Development Course</h1>
+                <h1 class="nm">Batch 15</h1>
+                <h2 class="nm">Exercise 2</h2>
+            </header>
+        </div>
+        <div class="hal3">
+            <section class="keterangan">
+                <div>
+                    <h3 class="text1">Silahkan untuk menggunakan kalkulator dibawah ini,</h3>
+                    <h4 class="text2">Dengan selalu mengklik tombol = (sama dengan) untuk kalkulasi.</h4>
+                </div>
+            </section>
+
+        </div>
+        <div class="kalkulator">
+            <table align="center">
+                <tr>
+                    <td colspan="5">
+                        <input type="text" disabled id="output" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="btn('1')">1</button></td>
+                    <td><button class="btn" onclick="btn( '2') ">2</button></td>
+                    <td><button class="btn" onclick="btn( '3') ">3</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(1) ">*</button></td>
+                    <td><button class="btn operator_pangkat" onclick="btn_operator(5) "><h4>x<sup>y</sup></h4></button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="btn( '4') ">4</button></td>
+                    <td><button class="btn" onclick="btn( '5') ">5</button></td>
+                    <td><button class="btn" onclick="btn( '6') ">6</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(2)">/</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(6)">1/x</button></td>
+
+                </tr>
+                <tr>
+                    <td><button class="btn " onclick="btn( '7') ">7</button></td>
+                    <td><button class="btn " onclick="btn( '8') ">8</button></td>
+                    <td><button class="btn " onclick="btn( '9') ">9</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(3) ">-</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(7) ">n!</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" onclick="koma()">.</button></td>
+                    <td><button class="btn" onclick="btn( '0')">0</button></td>
+                    <td><button class="btn clr " onclick="clr()">C</button></td>
+                    <td><button class="btn operator" onclick="btn_operator(4)">+</button></td>
+                    <td><button class="btn operator_pangkat" onclick="btn_operator(8) "><h4>x<sup>2</sup></h4></button></td>
+                </tr>
+                <tr>
+                    <td colspan="6 "><button class="btn hsl" style="width: 100%" onclick="hitung() ">=</button></td>
+                </tr>
+            </table>
+        </div>
+        <footer id="footerAll">
+            <div>
+                <p>Copyright &copy; 2019 | Created By Ardi Prasetia | All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

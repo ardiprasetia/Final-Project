@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<head>
+    <title>EXERCISE 4 Final project</title>
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style>
+        body {
+            background-image: url(header.png);
+            background-attachment: fixed;
+        }
+        
+        nav.navbar {
+            background: #070707;
+        }
+        
+        #link-nav {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .d-block {
+            width: 100%;
+            height: 400px;
+        }
+        
+        marquee {
+            scroll-padding-top: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            color: azure;
+            font-size: 30px;
+        }
+        
+        .all-container {
+            width: 84%;
+            margin-left: 8%;
+            margin-top: 10px
+        }
+        
+        .left {
+            margin-right: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .right {
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        footer#footerAll {
+            padding-top: 10px;
+            text-align: center;
+            background: #373c43;
+            overflow: hidden;
+            color: #77808d
+        }
+    </style>
+</head>
+
+<html>
+
+<body>
+    <div class="all-container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" id="link-nav" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="link-nav" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               My Exercise
+                              </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Exercise1.html">Exercise 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Exercise2.html">Exercise 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Exercise3.html">Exercise 3</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+                <form class="form-inline my-2 my-lg-0" action="https://formspree.io/ardi.prasetia19@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Name" class="form-control mr-sm-2">
+                    <input type="email" name="_replyto" class="form-control mr-sm-2" placeholder="Email" aria-label="Email">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send</button>
+                </form>
+            </div>
+        </nav>
+        <div class="bd-example">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="devc.jpeg." class="d-block w-100" alt="...">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="bt15.jpg" class="d-block w-100" alt="...">
+
+                    </div>
+                    <div class="carousel-item">
+                        <img src="last.jpg" class="d-block w-100" alt="...">
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="header">
+
+            <marquee>
+                <p>Javascript Development Course Batch 15 (Final Project)</p>
+            </marquee>
+
+        </div>
+
+        <table>
+            <tr>
+                <td>
+                    <div class="card mb-3 left" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="ht.jpg" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">SESSION 1</h5>
+                                    <p class="card-text">HTML atau Hyper Text Markup Language adalah sebuah bahasa markup untuk mendeksripsikan sebuah struktur dan konten dari dokumen web.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 4 hours ago</small></p>
+
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#learnmore">
+                                            Learn More
+                                          </button>
+
+
+                                    <div class="modal fade" id="learnmore" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">HTML</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="isi_modal">Hypertext Markup Language adalah sebuah bahasa markah yang digunakan untuk membuat sebuah halaman web, menampilkan berbagai informasi di dalam sebuah penjelajah web Internet dan pemformatan hiperteks
+                                                        sederhana yang ditulis dalam berkas format ASCII agar dapat menghasilkan tampilan wujud yang terintegerasi.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+    </div>
+    </div>
+    </td>
+    <td>
+        <div class="card mb-3 right" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="cs.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">SESSION 2</h5>
+                        <p class="card-text">CSS (Cascading Style Sheet) adalah file yang memungkinkanmu untuk memisahkan konten HTML dengan style nya. </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#learnmore2">
+                                Learn More
+                              </button>
+
+
+                        <div class="modal fade" id="learnmore2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">CSS</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="isi_modal">Cascading Style Sheet merupakan aturan untuk mengatur beberapa komponen dalam sebuah web sehingga akan lebih terstruktur dan seragam. CSS bukan merupakan bahasa pemograman, CSS hanya bentuk-bentuk pemercantik atau
+                                            yang memperindah konten HTML.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="card mb-3 left" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="js.jpg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">SESSION 3</h5>
+                            <p class="card-text">JavaScript adalah bahasa pemrograman tingkat tinggi dan dinamis. JavaScript populer di internet dan dapat bekerja di sebagian besar penjelajah web browser.</p>
+
+                            <p class="card-text"><small class="text-muted">Last updated 1 year ago</small></p>
+
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#learnmore3">
+                                Learn More
+                              </button>
+
+
+                            <div class="modal fade" id="learnmore3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">JAVASCRIPT</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="isi_modal">Sebelumnya kita sudah banyak belajar tentang HTML dan CSS untuk membuat sebuah halaman web yang sederhana. HTML ini bersifat statis, dimana apa yang kita tulis di awal, itulah yang akan ditampilkan di browser
+                                                user. JavaScript berbeda dengan HTML, dimana JavaScript bersifat dinamis, dimana banyak proses yang akan berjalan seiring program JavaScript ini berfungsi.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card mb-3 right" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="bst.jpeg" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">SESSION 4</h5>
+                            <p class="card-text">Bootstrap merupakan salah satu framework HTML, CSS dan javascript yang paling populer pada saat ini di kalangan web developer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#learnmore4">
+                                    Learn More
+                                  </button>
+
+
+                            <div class="modal fade" id="learnmore4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">BOOTSTRAP</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="isi_modal">Bootstrap adalah front-end framework yang solek, bagus dan luar biasa yang mengedapankan tampilan untuk mobile device (Handphone, smartphone dll.) guna mempercepat dan mempermudah pengembangan website. Bootstrap
+                                                menyediakan HTML, CSS dan Javascript siap pakai dan mudah untuk dikembangkan.
+
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </table>
+
+    <footer id="footerAll">
+        <div>
+            <p>Copyright &copy; 2019 | Created By Ardi Prasetia | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="popper.min.js"></script>
+
+
+
+
+</body>
+
+</html>
